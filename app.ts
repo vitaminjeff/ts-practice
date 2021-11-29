@@ -39,7 +39,7 @@ const result = add(number1, number2, printResult, resultPhrase);
 // };
 
 enum Role {
-  ADMIN,
+  ADMIN = 5,
   READ_ONLY,
   AUTHOR,
 }
