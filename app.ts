@@ -20,6 +20,18 @@ let number1 = 5; // same as 5.0, use type inference
 const number2 = 2.8;
 const printResult = true;
 let resultPhrase = 'Result is: '
-resultPhrase = 0;
+// resultPhrase = 0; // build time error
 
 const result = add(number1, number2, printResult, resultPhrase);
+
+// objects
+
+const person: {
+    name: string
+    age: number
+} = {
+    name: 'Maximilian',
+    age: 30
+};
+
+console.log(person.name);
