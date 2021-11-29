@@ -55,8 +55,8 @@ const person = {
 // person.role[1] = 10; // supported type check
 // person.role = [0, 'admin', 'user']; // supported type check
 
-let favoriteActiviites: any[];
-favoriteActiviites = 5;
+let favoriteActiviites: string[];
+favoriteActiviites = ["Sports"];
 
 console.log(person.name);
 for (const hobby of person.hobbies) {
