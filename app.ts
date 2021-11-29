@@ -26,26 +26,33 @@ const result = add(number1, number2, printResult, resultPhrase);
 
 // objects
 
-// const person: {
-//     name: string
-//     age: number
-// } = {
-//     name: 'Maximilian',
-//     age: 30,
-//     hobbies: ['Sports', 'Cooking']
-// };
-
-const person = {
+const person: {
+  name: string;
+  age: number;
+  hobbies: string[];
+  role: [number, string]; // tuples
+} = {
   name: "Maximilian",
   age: 30,
   hobbies: ["Sports", "Cooking"],
+  role: [2, "author"],
 };
+
+// const person = {
+//   name: "Maximilian",
+//   age: 30,
+//   hobbies: ["Sports", "Cooking"],
+//   role: [2, "author"], // union type
+// };
+
+person.role.push("admin"); // shouldn't allow this, but typescript doesn't allow this
+// person.role[1] = 10; // supported type check
+// person.role = [0, 'admin', 'user']; // supported type check
 
 let favoriteActiviites: string[];
 favoriteActiviites = ["Sports"];
 
 console.log(person.name);
-
 for (const hobby of person.hobbies) {
   console.log(hobby.toUpperCase());
   // console.log(hobby.map()); // ERROR
