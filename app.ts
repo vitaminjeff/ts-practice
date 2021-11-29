@@ -40,8 +40,8 @@ const result = add(number1, number2, printResult, resultPhrase);
 
 enum Role {
   ADMIN = 5,
-  READ_ONLY,
-  AUTHOR,
+  READ_ONLY = 100,
+  AUTHOR = "sometext",
 }
 
 const person = {
