@@ -1,16 +1,16 @@
 // console.log('Time to get started...');
 
 function add(n1: number, n2: number, showResult: boolean, phrase: string) {
-    // if (typeof n1 !== 'number' && typeof n2 !== 'number') {
-    //     throw new Error('Incorrect input!');
-    // }
-    
-    const result = n1 + n2;
-    if(showResult) {
-        console.log(phrase + result);
-    } else {
-        return n1 + n2;
-    }
+  // if (typeof n1 !== 'number' && typeof n2 !== 'number') {
+  //     throw new Error('Incorrect input!');
+  // }
+
+  const result = n1 + n2;
+  if (showResult) {
+    console.log(phrase + result);
+  } else {
+    return n1 + n2;
+  }
 }
 
 // let number1: number = 5; // redundant
@@ -19,19 +19,34 @@ let number1 = 5; // same as 5.0, use type inference
 
 const number2 = 2.8;
 const printResult = true;
-let resultPhrase = 'Result is: '
+let resultPhrase = "Result is: ";
 // resultPhrase = 0; // build time error
 
 const result = add(number1, number2, printResult, resultPhrase);
 
 // objects
 
-const person: {
-    name: string
-    age: number
-} = {
-    name: 'Maximilian',
-    age: 30
+// const person: {
+//     name: string
+//     age: number
+// } = {
+//     name: 'Maximilian',
+//     age: 30,
+//     hobbies: ['Sports', 'Cooking']
+// };
+
+const person = {
+  name: "Maximilian",
+  age: 30,
+  hobbies: ["Sports", "Cooking"],
 };
 
+let favoriteActiviites: string[];
+favoriteActiviites = ["Sports"];
+
 console.log(person.name);
+
+for (const hobby of person.hobbies) {
+  console.log(hobby.toUpperCase());
+  // console.log(hobby.map()); // ERROR
+}
