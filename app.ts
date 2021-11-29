@@ -38,15 +38,17 @@ const result = add(number1, number2, printResult, resultPhrase);
 //   role: [2, "author"],
 // };
 
-const ADMIN = 0;
-const READ_ONLY = 1;
-const AUTHOR = 2;
+enum Role {
+  ADMIN,
+  READ_ONLY,
+  AUTHOR,
+}
 
 const person = {
   name: "Maximilian",
   age: 30,
   hobbies: ["Sports", "Cooking"],
-  role: 0,
+  role: Role.ADMIN,
 };
 
 // person.role.push("admin"); // shouldn't allow this, but typescript doesn't allow this
@@ -62,6 +64,6 @@ for (const hobby of person.hobbies) {
   // console.log(hobby.map()); // ERROR
 }
 
-if (person.role === ADMIN) {
+if (person.role === Role.ADMIN) {
   console.log("is admin");
 }
